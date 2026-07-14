@@ -1,0 +1,21 @@
+[package]
+name = "grizzly"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "grizzly"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+dirs = "5"
+windows = { version = "0.58", features = [
+    "Win32_UI_Shell",
+    "Win32_System_EventLog",
+    "Win32_Foundation",
+] }
+
+
+[build-dependencies]
+winres = "0.1"
